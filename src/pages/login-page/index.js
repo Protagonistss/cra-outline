@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./index.scss";
-import BaseLayout from "../../layout/base-layout";
 import { connect } from "react-redux";
 import { loginAction } from "../../actions/login";
 import { Redirect } from "react-router-dom";
@@ -36,7 +35,7 @@ export default connect(
       const { name } = this.state;
 
       return (
-        <BaseLayout title="login">
+        <>
           <div>login</div>
           <input
             type="text"
@@ -47,7 +46,7 @@ export default connect(
           <button onClick={() => login({ name })}>
             {loading ? "loading" : "login"}
           </button>
-        </BaseLayout>
+        </>
       );
     }
   }
