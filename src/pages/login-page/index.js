@@ -9,10 +9,15 @@ export default connect(
   // state
   ({ user }) => ({ user }),
   //dispatch
+  // {
+  //   login: (userInfo) => (dispatch) => {
+  //     loginAction(dispatch, userInfo);
+  //   },
+  // }
+
+  // saga style
   {
-    login: (userInfo) => (dispatch) => {
-      loginAction(dispatch, userInfo);
-    },
+    login: (userInfo) => ({ type: "loginSaga", payload: userInfo }),
   }
 )(
   class LoginPage extends Component {

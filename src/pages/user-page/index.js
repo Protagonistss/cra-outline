@@ -10,7 +10,9 @@ export default connect(({ user }) => ({ user }))(
       return (
         <BaseLayout title="center">
           <div>UserPage</div>
-          <p>姓名:{name}</p>
+          <p>id:{id}</p>
+          <p>name:{name}</p>
+          <p>money:{money}</p>
         </BaseLayout>
       );
     }
