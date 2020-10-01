@@ -22,9 +22,9 @@ async function login(userInfo, dispatch) {
 }
 
 async function getProfile(dispatch, userInfo) {
-  await loginApi.getProfile(userInfo).then(
+  return await loginApi.getProfile(userInfo).then(
     (res) => {
-      dispatch({ type: "LOGIN_SUCCESS", payload: res });
+      dispatch({ type: "LOGIN_SUCCESS", payload: { ...userInfo, ...res } });
     },
     (err) => {
       dispatch({ type: "LOGIN_FAIL", payload: err });
