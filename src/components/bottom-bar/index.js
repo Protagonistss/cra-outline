@@ -5,6 +5,9 @@ import "./index.scss";
 
 const model = new MenuModel();
 export default class BottonBar extends Component {
+  componentWillUnmount() {
+    console.log("bottom bar");
+  }
   render() {
     return (
       <ul className="bottomBar">

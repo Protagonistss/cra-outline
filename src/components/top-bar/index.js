@@ -1,7 +1,20 @@
 import React, { Component } from "react";
+import "./index.scss";
 
 export default class TopBar extends Component {
+  componentWillUnmount() {
+    console.log("componentWillUnmout");
+  }
   render() {
-    return <div>TopBar</div>;
+    const { title } = this.props;
+    return (
+      <div className="topBar">
+        <span
+          onClick={() => "hi"}
+          className="iconfont icon-jiantou-copy"
+        ></span>
+        <div className="menuItem">{title}</div>
+      </div>
+    );
   }
 }

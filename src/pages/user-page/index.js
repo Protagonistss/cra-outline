@@ -4,7 +4,7 @@ import BaseLayout from "../../layout/base-layout";
 export default class UserPage extends Component {
   render() {
     return (
-      <BaseLayout>
+      <BaseLayout title="center">
         <div>UserPage</div>
       </BaseLayout>
     );

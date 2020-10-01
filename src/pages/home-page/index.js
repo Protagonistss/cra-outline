@@ -5,7 +5,7 @@ import BaseLayout from "../../layout/base-layout";
 export default class HomePage extends Component {
   render() {
     return (
-      <BaseLayout>
+      <BaseLayout title="home">
         <div>
           <h3>HomePage</h3>
         </div>
