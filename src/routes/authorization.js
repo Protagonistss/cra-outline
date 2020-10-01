@@ -9,12 +9,13 @@ export default connect(({ user }) => {
     render() {
       console.log("this.props", this.props);
       const { isLogin, component, ...rest } = this.props;
+      const CurrentComponent = component;
       return (
         <Route
           {...rest}
           render={({ location }) =>
             isLogin ? (
-              component
+              <CurrentComponent></CurrentComponent>
             ) : (
               <Redirect
                 to={{
