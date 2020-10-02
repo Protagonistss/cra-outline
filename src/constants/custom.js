@@ -17,7 +17,7 @@ class MenuModel {
     return this._data;
   }
   set setData(item) {
-    this._data.push(item);
+    console.error("_data of inner can not be modifid");
   }
 }
 
